@@ -5,9 +5,11 @@ import subprocess
 import time
 import os
 
+
 def show_image(img):
     cv.imshow("Image", img)
     cv.waitKey(0)
+
 
 def draw_labels_and_boxes(img, boxes, confidences, classids, idxs, colors, labels):
     # If there are any detections

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import numpy as np
 import argparse
 import cv2 as cv
@@ -142,16 +144,16 @@ if __name__ == '__main__':
 
 				writer.write(frame)
 
-			print ("[INFO] Cleaning up...")
+			print("[INFO] Cleaning up...")
 			writer.release()
 			vid.release()
-
 
 	else:
 		# Infer real-time on webcam
 		count = 0
-
+		print(f'cv: {cv}')
 		vid = cv.VideoCapture(0)
+		print(f'vid: {vid}')
 		while True:
 			_, frame = vid.read()
 			height, width = frame.shape[:2]
